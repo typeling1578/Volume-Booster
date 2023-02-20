@@ -1,0 +1,39 @@
+{
+    "manifest_version": 2,
+    "name": "Volume Booster",
+    "version": "1.0",
+    "description": "",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "volume-booster@typeling1578",
+            "strict_min_version": "102.0"
+        }
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_script.js"
+            ],
+            "all_frames": true
+        }
+    ],
+    "browser_action": {
+        "default_title": "Volume Booster",
+        "default_popup": "popup.html"
+    }
+}
