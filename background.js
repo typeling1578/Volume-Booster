@@ -26,7 +26,7 @@ browser.webRequest.onHeadersReceived.addListener(
     ["blocking", "responseHeaders"]
 );
 
-browser.runtime.onMessage.addListener((request, sender, seneResponse) => {
+browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     switch (request.type) {
         case "bypass_cors_request":
             targets.push({
