@@ -1,3 +1,7 @@
+const sc = document.createElement("script");
+sc.src = browser.runtime.getURL("inject_to_page.js");
+document.documentElement.appendChild(sc);
+
 let currentVolume = 100;
 
 function updateElements() {
